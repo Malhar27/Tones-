@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ringtone Download Site</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#f3f3f3; margin:0; padding:0; }
+    header { background:#4b4bff; color:#fff; text-align:center; padding:20px; }
+    .container { max-width:900px; margin:30px auto; padding:0 15px; }
+    #search { width:100%; padding:10px; border-radius:6px; border:1px solid #ccc; margin-bottom:20px; }
+
+    .ringtone-list { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:20px; }
+
+    .ringtone {
+      background:white; border-radius:10px; padding:15px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .ringtone img {
+      width:100%; height:150px; object-fit:cover; border-radius:10px;
+    }
+
+    .ringtone h3 { margin:10px 0 5px; }
+
+    .btn-download { display:inline-block; padding:8px 14px; background:#4b4bff; color:white; text-decoration:none; border-radius:6px; margin-top:10px; cursor:pointer; }
+    audio { width:100%; margin-top:10px; }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .pagination button {
+      margin: 0 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+      background: #4b4bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+    }
+    .pagination button.active {
+      background: #333;
+    }
+    .pagination button:hover {
+      background: #333;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🎵Ringtone Downloader</h1>
+</header>
+
+<div class="container">
+  <input type="text" id="search" placeholder="Search ringtone..." onkeyup="searchRingtone()">
+
+  <div class="ringtone-list" id="ringtoneList">
+<div class="ringtone">
+      <img src="Sunflower.jpg" alt="Sunflower">
+      <h3>Sunflower</h3>
+      <audio controls src="Sunflower.mp3"></audio>
+      <a class="btn-download" href="#" onclick="downloadFile('Sunflower.mp3')">Download</a>
+    </div>
+
+    <div class="ringtone">
+      <img src="spidy.jpg" alt="Intro">
+      <h3>Intro</h3>
+      <audio controls src="Aura.mp3"></audio>
+      <a class="btn-download" href="#" onclick="downloadFile('HUB.mp3')">Download</a>
+    </div>
+
+    <div class="ringtone">
+      <img src="Auraf.jpg" alt="Ringtone Image">
+      <h3>Aura farming</h3>
+      <audio controls src="Aura.mp3"></audio>
+      <a class="btn-download" href="#" onclick="downloadFile('Aura.mp3')">Download</a>
+    </div>
+
+    <div class="ringtone">
+      <img src="Aura.jpg" alt="Ringtone Image">
+      <h3>CR7</h3>
+      <audio controls src="Aura.mp3"></audio>
+      <a class="btn-download" href="#" onclick="downloadFile('Aura.mp3')">Download</a>
+    </div>
+
+    <div class="ringtone">
+      <img src="BE.jpg" alt="Ringtone Image">
+      <h3>Wild flower</h3>
+      <audio controls src="Aura.mp3"></audio>
+      <a class="btn-download" href="#" onclick="downloadFile('Aura.mp3')">Download</a>
+    </div>
+
+    <div class="ringtone">
+      <img src="Auraf.jpg" alt="Ringtone Image">
+      <h3>Aura farming</h3>
+      <audio controls src="Aura.mp3"></audio>
+      <a class="btn-download" href="#" onclick="downloadFile('Aura.mp3')">Download</a>
+    </div>
+
+    <div class="ringtone">
+      <img src="KId.jpg" alt="Ringtone Image">
+      <h3>Hehe</h3>
+      <audio controls src="hehe.mp3"></audio>
+      <a class="btn-download" href="#" onclick="downloadFile('Aura.mp3')">Download</a>
+    </div>
+
+    <div class="ringtone">
+      <img src="jesus.jpg" alt="Ringtone Image">
+      <h3>Mera yashu yashu</h3>
+      <audio controls src="Mera Yashu Yashu.mp3"></audio>
+      <a class="btn-download" href="#" onclick="downloadFile('Aura.mp3')">Download</a>
+    </div>
+
+    <div class="ringtone">
+      <img src="cat.webp" alt="Ringtone Image">
+      <h3>Meow Meowmeowmeow..</h3>
+      <audio controls src="meow_meow.mp3"></audio>
+      <a class="btn-download" href="#" onclick="downloadFile('Aura.mp3')">Download</a>
+    </div>
+
+    
+    <div class="ringtone">
+      <img src="Auraf.jpg" alt="Ringtone Image">
+      <h3>Aura farming</h3>
+      <audio controls src="Aura.mp3"></audio>
+      <a class="btn-download" href="#" onclick="downloadFile('Aura.mp3')">Download</a>
+    </div>
+
+    
+    <div class="ringtone">
+      <img src="Auraf.jpg" alt="Ringtone Image">
+      <h3>Aura farming</h3>
+      <audio controls src="Aura.mp3"></audio>
+      <a class="btn-download" href="#" onclick="downloadFile('Aura.mp3')">Download</a>
+    </div>
+
+    
+    <div class="ringtone">
+      <img src="Auraf.jpg" alt="Ringtone Image">
+      <h3>Aura farming</h3>
+      <audio controls src="Aura.mp3"></audio>
+      <a class="btn-download" href="#" onclick="downloadFile('Aura.mp3')">Download</a>
+    </div>
+
+     <div class="ringtone">
+      <img src="Auraf.jpg" alt="Ringtone Image">
+      <h3>Aura farming</h3>
+      <audio controls src="Aura.mp3"></audio>
+      <a class="btn-download" href="#" onclick="downloadFile('Aura.mp3')">Download</a>
+    </div>
+
+     <div class="ringtone">
+      <img src="Auraf.jpg" alt="Ringtone Image">
+      <h3>Aura farming</h3>
+      <audio controls src="Aura.mp3"></audio>
+      <a class="btn-download" href="#" onclick="downloadFile('Aura.mp3')">Download</a>
+    </div>
+
+     <div class="ringtone">
+      <img src="Auraf.jpg" alt="Ringtone Image">
+      <h3>Aura farming</h3>
+      <audio controls src="Aura.mp3"></audio>
+      <a class="btn-download" href="#" onclick="downloadFile('Aura.mp3')">Download</a>
+    </div>
+
+     <div class="ringtone">
+      <img src="cfm.jpg" alt="Ringtone Image">
+      <h3>Hurry up</h3>
+      <audio controls src="Aura.mp3"></audio>
+      <a class="btn-download" href="#" onclick="downloadFile('Aura.mp3')">Download</a>
+    </div>
+
+     <div class="ringtone">
+      <img src="dahyun_cat.jpg" alt="Ringtone Image">
+      <h3>u la la le ulalale..</h3>
+      <audio controls src="Aura.mp3"></audio>
+      <a class="btn-download" href="#" onclick="downloadFile('Aura.mp3')">Download</a>
+    </div>
+
+     <div class="ringtone">
+      <img src="TS.jpg" alt="Ringtone Image">
+      <h3>Peaky blinders theme</h3>
+      <audio controls src="Aura.mp3"></audio>
+      <a class="btn-download" href="#" onclick="downloadFile('Aura.mp3')">Download</a>
+    </div>
+    
+  </div>
+
+  <!-- Pagination buttons -->
+  <div class="pagination" id="pagination"></div>
+</div>
+
+<script>
+let currentPage = 1;
+const itemsPerPage = 9;
+const ringtoneList = document.getElementById('ringtoneList');
+const items = ringtoneList.getElementsByClassName('ringtone');
+const totalPages = Math.ceil(items.length / itemsPerPage);
+
+// Function to show items for the current page
+function showPage(page) {
+  currentPage = page;
+  const start = (page - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+
+  for (let i = 0; i < items.length; i++) {
+    items[i].style.display = (i >= start && i < end) ? 'block' : 'none';
+  }
+
+  // Update active button
+  const buttons = document.querySelectorAll('.pagination button');
+  buttons.forEach(btn => btn.classList.remove('active'));
+  if (buttons[page - 1]) buttons[page - 1].classList.add('active');
+}
+
+// Function to create pagination buttons
+function createPagination() {
+  const paginationDiv = document.getElementById('pagination');
+  paginationDiv.innerHTML = ''; // Clear existing buttons
+
+  for (let i = 1; i <= totalPages; i++) {
+    const button = document.createElement('button');
+    button.textContent = i;
+    button.onclick = () => showPage(i);
+    paginationDiv.appendChild(button);
+  }
+}
+
+// Function to force download (fallback if href doesn't work)
+function forceDownload(url) {
+  try {
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = url.split('/').pop(); // Get filename
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  } catch (e) {
+    // Fallback: Open in new tab if download fails
+    window.open(url, '_blank');
+  }
+}
+
+// Initialize pagination
+createPagination();
+showPage(1);
+
+// Modified search function to work with pagination
+function searchRingtone() {
+  let input = document.getElementById('search').value.toLowerCase();
+  let visibleCount = 0;
+
+  for (let i = 0; i < items.length; i++) {
+    let name = items[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+    if (name.includes(input)) {
+      items[i].style.display = "block";
+      visibleCount++;
+    } else {
+      items[i].style.display = "none";
+    }
+  }
+
+  // Hide pagination if searching
+  const paginationDiv = document.getElementById('pagination');
+  paginationDiv.style.display = input ? 'none' : 'flex';
+
+  // If no search, reset to page 1
+  if (!input) {
+    showPage(1);
+  }
+}
+</script>
+
+</body>
+</html>
